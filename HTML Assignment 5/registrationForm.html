@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <title>Registration Form </title>
+    <head>
+        <style>
+            .headerType{
+            color: blue
+        }
+        </style>
+
+        <script>
+            function sendvalues()
+            {
+                var firstname=document.getElementById("fName").value; // declare variable add textbox id
+                var lastname=document.getElementById("lName").value;
+
+                localStorage.setItem("fNameValue", firstname); //using local storage to save the data
+                localStorage.setItem("lNameValue", lastname);
+
+                return false;
+
+            }
+        </script>
+        
+    </head>
+    <body>
+
+        <h1 class="headerType">Please register to see Zhang Yu's profile...</h1>
+
+        <form action="/Users/zhangyu/introtodev/HTML  - Assignment 4/mySecondHTML.html">
+
+            First Name:<input type="text" id="fName">
+            <br>
+            <br>
+            
+            Last Name:<input type="text" id="lName"> 
+            <br>
+            <br>
+
+            <label for="maritalStatus">Marital Status:</label> <br>
+            <input type="radio" id="mStatus" name="mStatus" value="Single" checked>Single</input> <br>
+            <input type="radio" name="mStatus" value="Married">Married</input> <br>
+            <input type="radio" name="mStatus" value="Married and still available">Married and still available ^_^</input><br>
+
+            <br>
+            <br>
+
+            <label for="coffeeTea">What do you like to drink?:</label><br>
+            <input type="radio" name="cTMe" value="Coffee">Coffee</input> <br>
+            <input type="radio" name="cTMe" value="Tea">Tea</input><br>
+            <input type="radio" name="cTMe" value="Me" checked>Me :)</input><br><br>
+
+            <input type="submit" value="View ZY's Profile" onclick="sendvalues();"/>
+
+
+        </form>
+
+
+
+
+    </body>
+</html>
