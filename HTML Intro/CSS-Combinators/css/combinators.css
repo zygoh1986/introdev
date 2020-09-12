@@ -1,0 +1,21 @@
+p + div {
+
+    border: 5px solid green; 
+    background-color: lightblue;
+    padding: 20px;
+}
+
+div + p{
+    font-size: 20px;
+    color: blue;
+}
+
+div > p {
+    color:red;
+}
+
+
+div div {
+    color:red;
+    font-size:30px;
+}

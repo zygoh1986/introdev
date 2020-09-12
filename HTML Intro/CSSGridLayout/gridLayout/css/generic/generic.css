@@ -1,0 +1,5 @@
+div > div {
+    border: 10px solid blue;
+    background-color: lightblue;
+    padding: 5px;
+}
