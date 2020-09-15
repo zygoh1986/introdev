@@ -1,0 +1,18 @@
+.header {
+  background-color: lightsteelblue;
+  animation: portfolioMove 10s infinite;
+}
+
+.portfolioHeader {
+  display: block;
+  margin: auto auto auto auto;
+}
+
+@keyframes portfolioMove {
+  from {
+    background-color: lightsteelblue;
+  }
+  to {
+    background-color: navy;
+  }
+}

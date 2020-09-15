@@ -1,0 +1,38 @@
+.masterBodyLeftCol .masterBodyRightCol .masterBodyCenterCol {
+  float: left;
+  width: 100%;
+}
+
+.zyprofile {
+  display: block;
+  border: 5px solid navy;
+  border-radius: 20%;
+  width: 50%;
+  box-shadow: 5px 10px darkorchid;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.zyName
+{
+  padding:40px;
+  text-align: center;
+}
+
+.pMasterBody{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: normal;
+  text-align: justify;
+  margin: 20px
+}
+
+.masterBodyCenterCol > p
+{
+  padding: 5px;
+}
+
+.quoteOfTheMonth
+{
+  margin:40px;
+}
