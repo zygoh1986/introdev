@@ -1,5 +1,5 @@
 .masterBodyLeftCol .masterBodyRightCol .masterBodyCenterCol {
-  float: left;
+  float: center;
   width: 100%;
 }
 
@@ -8,7 +8,7 @@
   border: 5px solid navy;
   border-radius: 20%;
   width: 50%;
-  box-shadow: 5px 10px darkorchid;
+  box-shadow: 5px 10px black;
   margin-left: auto;
   margin-right: auto;
 }

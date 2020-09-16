@@ -1,5 +1,7 @@
+* {
+  box-sizing: border-box;
+}
 .gridContainer {
-  background-color: lightgrey;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
