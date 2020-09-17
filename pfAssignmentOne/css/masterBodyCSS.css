@@ -6,32 +6,28 @@
   margin-right: auto;
 }
 
-.zyName
-{
-  padding:40px;
+.zyName {
+  padding: 40px;
   text-align: center;
 }
 
-.pMasterBody{
+.pMasterBody {
   text-overflow: ellipsis;
   overflow: hidden;
   word-wrap: normal;
   text-align: justify;
-  margin: 20px
+  margin: 20px;
 }
 
-.masterBodyCenterCol > p
-{
+.masterBodyCenterCol > p {
   padding: 5px;
 }
 
-.quoteOfTheMonth
-{
-  margin:40px;
+.quoteOfTheMonth {
+  margin: 40px;
 }
 
-.aboutMyselfText
-{
+.aboutMyselfText {
   margin: 40px;
   text-align: center;
 }
