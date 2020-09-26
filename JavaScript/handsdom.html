@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function testDOM() {
+            console.log('function is being called');
+            /**
+             * Identify an element inside the document
+             * 1. refer the document itself
+             * 2. get the element -> using an identifier
+             **/
+            document.getElementById('testDiv').innerHTML = "Replaced Test With The Click Of A Button!!";
+            console.log(document.getElementsByClassName('test'));
+            console.log(document.getElementsByClassName('test')[0].id);
+        }
+
+        function addClass() {
+            document.getElementById('testDiv1').classList.add('test');
+        }
+
+        function removeClass() {
+            document.getElementById('testDiv1').classList.remove('test');
+        }
+
+        function addStyle() {
+            document.getElementById('testDiv1').style.color = 'green';
+        }
+    </script>
+    <style>
+        .test {
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test" id="testDiv">Test Text Original</div><br>
+    <div id="testDiv1">Test Text Original</div><br>
+    <input type="button" value="Replace Text In Div" onclick="testDOM()">
+    <input type="button" value="Add Class In Div" onclick="addClass()">
+    <input type="button" value="Remove Class IFrom Div" onclick="removeClass()">
+    <input type="button" value="Update Style For Div" onclick="addStyle()">
+</body>
+</html>
