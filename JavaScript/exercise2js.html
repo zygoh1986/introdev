@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="exercise2js.js"></script>
+    </head>
+
+<body>
+
+    <h2>JavaScript</h2>
+<article>
+
+
+
+    <form>
+        <input type="button" value="External JS Button" onclick="alertTest();">
+    </form>
+</article>
+<br>
+
+<article>
+
+
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+        Inline JS - Date & Time</button>
+
+    <p id="demo"></p>
+
+</article>
+
+<article>
+    <button type="button" onclick="bodyScript()">Internal JS</button>
+    <script>
+        function bodyScript() {
+           alert('Internal JS - using Script Tag');
+        }
+    </script>
+</article>
+
+</body>
+
+</html>
