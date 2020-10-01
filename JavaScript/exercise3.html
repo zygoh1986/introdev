@@ -4,6 +4,21 @@
 <head>
     <script>
 
+        /**
+         * Use a map function of exercise 3
+         * 
+         * Map excutes a function on every element of an array
+        */
+
+        function sumOfArray(array1, array2)
+        {
+            var array3 = array1.map(function(value, index){
+                value = value + array2[index];
+                return value;
+            })
+            console.log(array3);
+        }
+
 function addArray(array1, array2)
         {
             var array1 = [1,2];
@@ -15,6 +30,62 @@ function addArray(array1, array2)
             alert(result);
 
 
+        }
+
+        /**function sumOfArray (array1, array2){
+         * var array3 = new Array();
+         * 
+         * if (array1.length == array2.length){
+         * for(counter=0; counter<array1.length; counter++)
+         * {
+         *  array3[counter] = array1[counter] + array2[counter]
+         * }
+         * }
+         * else 
+         * {
+         * console.log('the length of the arrays you input was not equal please provide another input')}
+         * }
+        */
+
+        /**
+         * More functions that an array supports
+         * 
+         * reserve, join, slice
+        */
+
+        var array = [1,2,3,4,5,6]
+        console.log('reverse of the array -> ' + array.reverse());
+        console.log('slice of the array -> ' + array.slice(2));
+        console.log('join of the array -> ' + array.join('+'));
+
+        /**
+         * Map function for array
+         * 
+         * Function that you can excute on all elements of an array individually
+         * 
+         * Problem statment
+         * add 1 to every number in the array
+         * 
+         * Map function has three arugment
+         * 
+         * 1. value of each element - mandatory
+         * 2. index of the element
+         * 
+        */
+
+        var mappedvalues = array.map(function(value)
+        {
+            return value+=1;
+        })
+        console.log(mappedvalues)
+
+        function add1totalnumber()
+        {
+            for (counter=0; counter<array.length; counter++)
+            {
+                array[counter] +=1;
+            }
+            console.log(array);
         }
     </script>
 </head>
