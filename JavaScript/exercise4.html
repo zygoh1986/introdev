@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <p id="cars"></p>
+    <script>
+        /**
+* Car - Super Class
+*
+* SUV - Type of car
+* MPV
+* Hatchback
+*
+* SUV
+* Merc GLA (Object of a type)
+* BMW X3
+*
+* 1. Define the properties and behviors of each of these classes
+* 2. Create the classes
+* 2. Create the inheritance relationship between the classes
+* 4. Create objects of the different types of cars
+*/
+
+
+class Car {
+    constructor (brand)
+    {
+        this.carname = brand; 
+    }
+    present()
+    {
+        return 'I have a car and its brand is ' + this.carname;
+    }
+}
+
+class Model extends Car {
+    constructor(brand, type, col)
+    {
+        super(brand)
+        this.type = type;
+        this.color = col;
+    }
+    show()
+    {
+        return this.present() + ', it is a ' + this.type + ' and the color of the car is ' + this.color;
+    }
+}
+
+myCar1 = new Model ("BMW", "7 Series", "white");
+myCar2 = new Model ("Merc GLA", "Hatchback", "Grey");
+
+document.getElementById("cars").innerHTML = "My first Car: " + myCar1.show() + '<br>' + "My second Car : " + myCar2.show(); 
+
+    </script>
+</body>
+</html>
