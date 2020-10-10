@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="demo">
+            <h1>The XMLHttpRequest Object</h1>
+            <button type="button" onclick="loadDoc()"> change content</button>
+        </div>
+        <script>
+            function loadDoc()
+            {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200)
+                    {
+                        document.getElementById("demo").innerHTML = JSON.parse(this.responseText);
+                    }
+                };
+
+                xhttp.open("GET", "http...", true);
+                xhttp.send();
+
+                fetch ('http://...¸axsdc.json')
+                .then(response => response.json())
+                .then(data => console.log(data));
+
+            }
+
+          /** i want to get <-> GET the name of all students because i am fetching data, i do not need to encapsulate or send a lot of data
+           * I want to post/send <-> POST to the server, the student details that the student has entered, there could be alot of data that i need to post, so i create a body of data (request body)
+           */
+
+        </script>
+    </body>
+</html>
