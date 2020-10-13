@@ -1,60 +1,37 @@
 <!DOCTYPE html>
 <html>
-
+  <title>My Services</title>
   <head>
-    <title>My Services</title>
-    <script src="/Users/zhangyu/introtodev/pfAssignmentOne/js/product.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src=""
   </head>
 
   <body>
 
     <br /><br />
+    <article align="center">
+      <div id="container">
+        
+        <h1>My Services</h1>
 
-    <div class="container" style="width: 600px">
-      <h2 align="center">My Services</h2>
-      <br /><br />
-      <select name="catergory" id="category" class="form-control input-lg">
-        <option value="">Select Category</option>
-      </select>
-
-      <br />
-      <select name="services" id="services" class="form-control input-lg">
-        <option value="">Select Services</option>
-      </select>
-
-      <br />
-      <select name="currency" id="currency" class="form-control input-lg">
-        <option value="">Select Currency</option>
-      </select>
-
-    </div>
-
-    <script>
-      $(document).ready(function () {
-  load_json_data("category");
-
-  function load_json_data(id, name, price) {
-    var html_code = "";
-    $.getJSON("product.json", function (data) {
-      html_code += '<option value=""> Select ' + id + "</option>";
-      $.each(data, function (key, value) {
-        if (id == "category") {
+        <div id="servicedetails">
+        <br /><br />
+        <select name="catergory" id="category" class="form-control input-lg">
+          <option value="">Select Category</option>
+        </select>
+        
+        <br /><br />
+        <select name="services" id="services" class="form-control input-lg">
+          <option value="">Select Services</option>
+        </select>
+        
+        <br /><br />
+        <select name="currency" id="currency" class="form-control input-lg">
+          <option value="">Select Currency</option></select>
           
-          if (value.services_id == "1") {
-            html_code += '<option value="' + value.services_id +'">' + value.service_name + "</option>";
-         }
-        } else if (value.services_id == "2") {
-            html_code += '<option value="' + value.serivces_id + '">' + value.service_name + "</option>";
-        }
-      });
-      $("#" + id).html(html_code);
-    });
-  }
-
-});
-    </script>
-
-
-  </body>
+          <br /><br />
+          </div>
+          <div id="servicecost"></div>
+          </div>
+    </article>
+  </body onload="getMyServicesCost()">
 </html>
