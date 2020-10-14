@@ -1,44 +1,55 @@
 {
-    "catalog": [
-        {
-            "id": 1,
-            "name": "Web Development",
-            "category": "Development",
-            "price": "SGD3,000"
-        },
-        {
-            "id": 2,
-            "name": "Mobile Development",
-            "category": "Development",
-            "price": "SGD20,000"
-        },
-        {
-            "id": 3,
-            "name": "Hybrid Mobile Development",
-            "category": "Development",
-            "price": "SGD15,000"
-        },
+"catalog": [
+    {
+        "name": "Development",
+        "id": 1,
+        "price": " ",
+        "cat_id": 0
 
-        {
-            "id": 4,
-            "name": "UI & UX Web Design",
-            "category": "Design",
-            "price": "SGD2,000"
-        },
+    },
+    {
+        "name": "Design",
+        "id": 2,
+        "price": " ",
+        "cat_id": 0
+    },
+    {
+        "name": "Web Development",
+        "id": 3,
+        "price": "SGD3,000",
+        "cat_id": 1
+    },
 
-        {
-            "id": 5,
-            "name": "3D Modeling",
-            "category": "Design",
-            "price": "SGD20,000"
-        },
+    {
+        "name": "Mobile Development",
+        "id": 4,
+        "price": "SGD20,000",
+        "cat_id": 1
+    },
+    {
+        "name": "Hybrid Development",
+        "id": 5,
+        "price": "SGD15,000",
+        "cat_id": 1
+    },
 
-        {
-            "id": 6,
-            "name": "UI & UX Web Design and 3D Modeling",
-            "category": "Design",
-            "price": "SGD21,000"
-        }
-                   
-    ]
+    {
+        "name": "UI & UX Web Design",
+        "id": 6,
+        "price": "SGD15,000",
+        "cat_id": 2
+    },
+    {
+        "name": "3D Modeling",
+        "id": 7,
+        "price": "SGD20,000",
+        "cat_id": 2
+    },
+    {
+        "name": "UI & UX Web Design and 3D Modeling",
+        "id": 8,
+        "price": "SGD21,000",
+        "cat_id": 2
+    }
+]
 }

@@ -1,25 +1,30 @@
+function myServices(){
 if (window.XMLHttpRequest){
 	xmlhttp = new XMLHttpRequest();
 } else {
 	  xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
-var txt = "";
+var txt1 = "";
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        var myObj = JSON.parse(this.responseText);
-        txt += "<select>";
+		var myObj = JSON.parse(this.responseText);
+		txt1 += '<select id="cat_select" onchange="serviceSelect()">';
         for (x = 0; x < myObj.catalog.length; x++) {
-            //txt += "<option>" + myObj[x].name;
-            //txt += "<option>" + myObj[x].price;
-            txt += '<option value="' + x + '">' + myObj.catalog[x].name + '</option>';
+			if(myObj.catalog[x].cat_id == 0)
+			{
+			txt1 += '<option value="' + x + '">' + myObj.catalog[x].name + '</option>';
+			}
+
         }
-        txt += "</select>";
-        document.getElementById("servicedetails").innerHTML = txt;
+        txt1+= "</select>";
+		document.getElementById("servicedetails").innerHTML = txt1;
+		console.log(txt1);
+		
     }
 };
 xmlhttp.open("GET", "http://127.0.0.1:5500/pfAssignmentOne/json/product.json", true);
 xmlhttp.send();
-
+}
 
 
 /**function getMyServiceCost(){
