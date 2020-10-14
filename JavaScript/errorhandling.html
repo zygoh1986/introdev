@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function errorTrial() {
+      let error1 = {
+        id: "lessthanzero",
+        description: "The number is less than zero!!"
+      }
+      var message, x;
+      x = document.getElementById("number").value;
+      try {
+        if (x < 0) {
+          throw error1;
+        }
+      } catch (err) {
+        console.log(err);
+      } finally {
+        document.getElementById("message").innerHTML = "All good";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <input type="text" id="number"></input>
+  <input type="button" onclick="errorTrial();" value="Test Number"></input>
+  <div id="message"></div>
+</body>
+
+</html>

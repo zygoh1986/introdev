@@ -1,65 +1,44 @@
 {
     "catalog": [
         {
-            "category_name": "Development",
-            "services_id": 1,
-            "services": [
-                {
-                    "service_name": "Web Development",
-                    "price": {
-                        "SG": "SGD3,000",
-                        "IN": "INR16,000",
-                        "US": "USD2,200"
-                    }
-                },
-                {
-                    "service_name": "Mobile Development",
-                    "price": {
-                        "SG": "SGD20,000",
-                        "IN": "INR1,000,000",
-                        "US": "USD14,740"
-                    }
-                },
-                {
-                    "service_name": "Hybrid Mobile Development",
-                    "price": {
-                        "SG": "SGD15,000",
-                        "IN": "INR810,000",
-                        "US": "USD11,000"
-                    }
-                }
-            ]},
-            {
-                "category_name": "Design",
-                "services_id": 2,
-                "services": [
-                    {
-                        "service_name": "UI & UX Web Design",
-                        "price": {
-                            "SG": "SGD2,000",
-                            "IN": "INR10,000",
-                            "US": "USD1,900"
-                        }
-                    },
-                    {
-                        "service_name": "3D Modeling",
-                        "price": {
-                            "SG": "SGD20,000",
-                            "IN": "INR1,000,000",
-                            "US": "USD14,740"
-                        }
-                    },
-                    {
-                        "service_name": "UI & UX Web Design and 3D Modeling",
-                        "price": {
-                            "SG": "SGD21,000",
-                            "IN": "INR1,130,000",
-                            "US": "USD15,400"
-                        }
-                    }
-                ]
-            }
+            "id": 1,
+            "name": "Web Development",
+            "category": "Development",
+            "price": "SGD3,000"
+        },
+        {
+            "id": 2,
+            "name": "Mobile Development",
+            "category": "Development",
+            "price": "SGD20,000"
+        },
+        {
+            "id": 3,
+            "name": "Hybrid Mobile Development",
+            "category": "Development",
+            "price": "SGD15,000"
+        },
 
-        
+        {
+            "id": 4,
+            "name": "UI & UX Web Design",
+            "category": "Design",
+            "price": "SGD2,000"
+        },
+
+        {
+            "id": 5,
+            "name": "3D Modeling",
+            "category": "Design",
+            "price": "SGD20,000"
+        },
+
+        {
+            "id": 6,
+            "name": "UI & UX Web Design and 3D Modeling",
+            "category": "Design",
+            "price": "SGD21,000"
+        }
+                   
     ]
 }

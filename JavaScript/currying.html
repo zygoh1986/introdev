@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function curry(f)
+        {
+            return function(a) {
+                return function(b)
+                {
+                    return f(a,b);
+                }
+            };
+        }
+
+        function sum(a,b)
+        {
+            return a + b;
+        }
+
+        sum(1,2)
+
+        let curriedSum = curry(sum);
+
+        alert(curriedSum(1)(2));
+
+
+
+        //ES6 code
+        const add = a => b => a+b;
+        alert(add(1)(2));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

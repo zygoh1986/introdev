@@ -1,4 +1,28 @@
-function getMyServiceCost(){
+if (window.XMLHttpRequest){
+	xmlhttp = new XMLHttpRequest();
+} else {
+	  xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+var txt = "";
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        txt += "<select>";
+        for (x = 0; x < myObj.catalog.length; x++) {
+            //txt += "<option>" + myObj[x].name;
+            //txt += "<option>" + myObj[x].price;
+            txt += '<option value="' + x + '">' + myObj.catalog[x].name + '</option>';
+        }
+        txt += "</select>";
+        document.getElementById("servicedetails").innerHTML = txt;
+    }
+};
+xmlhttp.open("GET", "http://127.0.0.1:5500/pfAssignmentOne/json/product.json", true);
+xmlhttp.send();
+
+
+
+/**function getMyServiceCost(){
 	var xmlhttp;
 	if (window.XMLHttpRequest){
 		xmlhttp = new XMLHttpRequest();
@@ -12,15 +36,16 @@ function getMyServiceCost(){
 			var output='<form>';
 			output+='<select id="service_select" onchange="serviceSelect()" >';
    			for (var i=0; i < catalog.length; i++){
-    			output +='<option value="'+i+'">'+catalog[i].title+'</option>';
+    			output +='<option value="'+i+'">'+catalog[i].name+'</option>';
    			}
 			output+='</select>';
 			output+='</form>';
    			document.getElementById("servicedetails").innerHTML=output;
-    	}
+		}
   	}
-	xmlhttp.open("GET","product.json",true);
+	xmlhttp.open("GET","http://127.0.0.1:5500/pfAssignmentOne/json/product.json",true);
 	xmlhttp.send();
+
 }
 
 function serviceSelect(){
@@ -40,12 +65,13 @@ function getServiceInfo(i){
     		var jsondata = JSON.parse(xmlhttp.responseText); //retrieve result as an JavaScript object
    			var catalog = jsondata.catalog;
 			var output='';
-   			output+= '<li>SGD: '+catalog[i].SG+'</li>';
-			output+= '<li>INR: '+catalog[i].IN+'</li>';
-			output+= '<li>USD: '+catalog[i].US+'</li>';
+   			output+= '<li>name: '+catalog[i].name+'</li>';
+			output+= '<li>price: '+catalog[i].price+'</li>';
+			//output+= '<li>USD: '+catalog[i].US+'</li>';
    			document.getElementById("servicecost").innerHTML=output;
     	}
   	}
-	xmlhttp.open("GET","product.json",true);
+	xmlhttp.open("GET","http://127.0.0.1:5500/pfAssignmentOne/json/product.json",true);
 	xmlhttp.send();
 }
+*/
