@@ -9,7 +9,6 @@ function myServices() {
 	  if (this.readyState == 4 && this.status == 200) {
 		var myObj = JSON.parse(this.responseText);
 		txt1 += '<select id="cat_select" onchange="serviceSelect()">';
-		//txt3 += '<select id="currency_select" onchange="serviceCurrencySelect()">';
 		for (x = 0; x < myObj.catalog.length; x++) {
 		  if (myObj.catalog[x].cat_id == 0) {
 			txt1 +=
@@ -23,7 +22,7 @@ function myServices() {
 	  if (this.readyState == 4 && this.status == 200) {
 		var myObj = JSON.parse(this.responseText);
 		txt1 +=
-		  '<select id="currency_select" onchange="serviceCurrencySelect()">';
+		  '<select id="currency_select" onchange="serviceSelect()">';
 		for (x = 0; x < myObj.catalog.length; x++) {
 		  if (myObj.catalog[x].cat_id == 9) {
 			txt1 +=
@@ -45,17 +44,13 @@ function myServices() {
   function serviceSelect() {
 	var selectBox = document.getElementById("cat_select");
 	var serviceIndex = selectBox.options[selectBox.selectedIndex].value;
-	getServiceInfo(serviceIndex);
-  }
-  
-  function serviceCurrencySelect() {
 	var selectCurrency = document.getElementById("currency_select");
-	var currencyIndex =
-	  selectCurrency.options[selectCurrency.selectedIndex].value;
-	getServiceCurrencyInfo(currencyIndex);
+	var currencyIndex = selectCurrency.options[selectCurrency.selectedIndex].value;
+	getServiceInfo(serviceIndex, currencyIndex);
   }
   
-  function getServiceInfo(i) {
+  function getServiceInfo(i, z) {
+	  console.log(i,z)
 	if (window.XMLHttpRequest) {
 	  xmlhttp = new XMLHttpRequest();
 	} else {
@@ -64,10 +59,11 @@ function myServices() {
 	var txt2 = "";
   
 	xmlhttp.onreadystatechange = function () {
+
 	  if (this.readyState == 4 && this.status == 200) {
 		var myObj = JSON.parse(this.responseText);
   
-		if (i == 1) {
+		if (i == 1 && z == 9) {
 		  for (x = 0; x < myObj.catalog.length; x++) {
 			if (myObj.catalog[x].cat_id == 1) {
 			  txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
@@ -77,8 +73,34 @@ function myServices() {
 			}
 		  }
 		}
+
+		else if (i == 1 && z == 10) {
+			for (x = 0; x < myObj.catalog.length; x++) {
+			  if (myObj.catalog[x].cat_id == 1) {
+				txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
+				txt2 += "<p> Price: " + myObj.catalog[x].INR + "<p>";
+	
+				document.getElementById("servicecost").innerHTML = txt2;
+			  }
+			}
+		  }
+		  else if (i == 1 && z == 11) {
+			for (x = 0; x < myObj.catalog.length; x++) {
+			  if (myObj.catalog[x].cat_id == 1) {
+				txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
+				txt2 += "<p> Price: " + myObj.catalog[x].USD + "<p>";
+	
+				document.getElementById("servicecost").innerHTML = txt2;
+			  }
+			}
+		  }
+
+		  else if (i == 0) {
+			txt2 += "<p> Please select the above services</p>";
+			document.getElementById("servicecost").innerHTML = txt2;
+		  }
   
-		if (i == 2) {
+		else if (i == 2 && z == 9) {
 		  for (x = 0; x < myObj.catalog.length; x++) {
 			if (myObj.catalog[x].cat_id == 2) {
 			  txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
@@ -88,11 +110,29 @@ function myServices() {
 			}
 		  }
 		}
-  
-		if (i == 0) {
-		  document.getElementById("servicecost").innerHTML = txt2;
-		}
-	  }
+		else if (i == 2 && z == 10) {
+			for (x = 0; x < myObj.catalog.length; x++) {
+			  if (myObj.catalog[x].cat_id == 2) {
+				txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
+				txt2 += "<p> Price: " + myObj.catalog[x].INR + "</p>";
+	
+				document.getElementById("servicecost").innerHTML = txt2;
+			  }
+			}
+		  }
+		  else if (i == 2 && z == 11) {
+			for (x = 0; x < myObj.catalog.length; x++) {
+			  if (myObj.catalog[x].cat_id == 2) {
+				txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
+				txt2 += "<p> Price: " + myObj.catalog[x].USD + "</p>";
+	
+				document.getElementById("servicecost").innerHTML = txt2;
+			  }
+			}
+		  }
+
+
+	  	}
 	};
 	xmlhttp.open(
 	  "GET",
@@ -100,60 +140,5 @@ function myServices() {
 	  true
 	);
 	xmlhttp.send();
-  }
-  
-  function getServiceCurrencyInfo(z) {
-	if (window.XMLHttpRequest) {
-	  xmlhttp = new XMLHttpRequest();
-	} else {
-	  xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	var txt2 = "";
-  
-	xmlhttp.onreadystatechange = function () {
-	  if (this.readyState == 4 && this.status == 200) {
-		var myObj = JSON.parse(this.responseText);
-  
-		if (z == 10) {
-		  for (x = 0; x < myObj.catalog.length; x++) {
-			if (myObj.catalog[x].cat_id == 1) {
-			  txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
-			  txt2 += "<p> Price: " + myObj.catalog[x].INR + "<p>";
-  
-			  document.getElementById("servicecost").innerHTML = txt2;
-			}
-		  }
-		}
-  
-		if (z == 11) {
-		  for (x = 0; x < myObj.catalog.length; x++) {
-			if (myObj.catalog[x].cat_id == 2) {
-			  txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
-			  txt2 += "<p> Price: " + myObj.catalog[x].USD + "</p>";
-  
-			  document.getElementById("servicecost").innerHTML = txt2;
-			}
-		  }
-		}
-  
-		if (i == 9) {
-		  document.getElementById("servicecost").innerHTML = txt2;
-		}
-	  }
-	};
-	xmlhttp.open(
-	  "GET",
-	  "http://127.0.0.1:5500/pfAssignmentOne/json/product.json",
-	  true
-	);
-	xmlhttp.send();
-  }
-  
-  document.getElementById("btn").addEventListener("click", myFunction);
-  
-  function myFunction() 
-  {
-	  alert("hello")
-  
   }
   
