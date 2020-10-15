@@ -1,19 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <title>My Services</title>
   <head>
-    <script src="https://zygoh1986.github.io/introdev/pfAssignmentOne/js/product.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://zygoh1986.github.io/introdev/pfAssignmentOne/css/searchGrid.css"/>
+      <link rel="stylesheet" href="https://zygoh1986.github.io/introdev/pfAssignmentOne/css/headerCSS.css"/>
+      <link rel="stylesheet" href="https://zygoh1986.github.io/introdev/pfAssignmentOne/css/navHeaderCSS.css"/>
+      <link rel="stylesheet" href="https://zygoh1986.github.io/introdev/pfAssignmentOne/css/masterBodyCSS.css"/>
+      <link rel="stylesheet" href="https://zygoh1986.github.io/introdev/pfAssignmentOne/css/footerCSS.css"/>
+      <script src="https://zygoh1986.github.io/introdev/pfAssignmentOne/js/product.js"></script>
+    
   </head>
 
   <body onload="myServices()">
-    <article>
-      <div id="container">
-        <h1>My Services</h1>
-        <div id="servicedetails"> </div>
-          <br /><br />
-          
+    <article class="searchGridContainer">
+      <section class="header">
+        <img
+          src="https://zygoh1986.github.io/introdev/pfAssignmentOne/image/landscape.jpg"
+          class="portfolioHeader"
+          alt="portfolio"
+        />
+        <section class="headerContent">
+          <h1 class="welcomeText">My Services </h1>
+        </section>
+      </section>
+      <nav class="navHeader">
+        <ul class="navHeaderIcons">
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank">Linkedin</a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+          </li>
+          <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+          <li>
+            <a href="https://stackoverflow.com/" target="_blank"
+              >Stack Overflow</a
+            >
+            <li><a href="https://zygoh1986.github.io/introdev/pfAssignmentOne/html/products.html" target="_blank">My Services</a></li>
+          </li>
+        </ul>
+      </nav>
+
+      <article class="searchBody">
+        <div id="search"> </div>
+      </article>
+
+      <article class="masterBodyLeft">
+          <div id="servicedetails"> </div>
+      </article> 
+
+      <article class="masterBodyCenter"></article>
+
+        <article class="masterBodyRight">
           <div id="servicecost"></div>
-          <br/>
+          </article>
+          
+          
+          <section class="footer">
+            <p>My Services</p>
+          </section>
 
     </article>
   </body>

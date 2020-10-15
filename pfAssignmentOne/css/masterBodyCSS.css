@@ -46,3 +46,12 @@ blockquote
   padding: 5px;
   font-style: italic;
 }
+
+.searchBody
+{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: normal;
+  text-align: justify;
+  margin: 20px;
+}
