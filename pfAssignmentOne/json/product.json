@@ -1,55 +1,93 @@
 {
-"catalog": [
-    {
-        "name": "Development",
-        "id": 1,
-        "price": " ",
-        "cat_id": 0
-
-    },
-    {
-        "name": "Design",
-        "id": 2,
-        "price": " ",
-        "cat_id": 0
-    },
-    {
-        "name": "Web Development",
-        "id": 3,
-        "price": "SGD3,000",
-        "cat_id": 1
-    },
-
-    {
-        "name": "Mobile Development",
-        "id": 4,
-        "price": "SGD20,000",
-        "cat_id": 1
-    },
-    {
-        "name": "Hybrid Development",
-        "id": 5,
-        "price": "SGD15,000",
-        "cat_id": 1
-    },
-
-    {
-        "name": "UI & UX Web Design",
-        "id": 6,
-        "price": "SGD15,000",
-        "cat_id": 2
-    },
-    {
-        "name": "3D Modeling",
-        "id": 7,
-        "price": "SGD20,000",
-        "cat_id": 2
-    },
-    {
-        "name": "UI & UX Web Design and 3D Modeling",
-        "id": 8,
-        "price": "SGD21,000",
-        "cat_id": 2
+    "catalog": [
+        {
+            "name": " Select Service",
+            "id": 0,
+            "price": " ",
+            "cat_id": 0
+    
+        },
+        {
+            "name": "Development",
+            "id": 1,
+            "price": " ",
+            "cat_id": 0
+    
+        },
+        {
+            "name": "Design",
+            "id": 2,
+            "price": " ",
+            "cat_id": 0
+        },
+        {
+            "name": "Web Development",
+            "id": 3,
+            "price": "SGD3,000",
+            "INR": "INR159,000",
+            "USD": "USD2,000",
+            "cat_id": 1
+        },
+    
+        {
+            "name": "Mobile Development",
+            "id": 4,
+            "price": "SGD20,000",
+            "INR": "INR1,000,000",
+            "USD": "USD15,000",
+            "cat_id": 1
+        },
+        {
+            "name": "Hybrid Development",
+            "id": 5,
+            "price": "SGD15,000",
+            "INR": "INR810,000",
+            "USD": "USD12,000",
+            "cat_id": 1
+        },
+    
+        {
+            "name": "UI & UX Web Design",
+            "id": 6,
+            "price": "SGD15,000",
+            "INR": "INR810,000",
+            "USD": "USD12,000",
+            "cat_id": 2
+        },
+        {
+            "name": "3D Modeling",
+            "id": 7,
+            "price": "SGD20,000",
+            "INR": "INR1,000,000",
+            "USD": "USD15,000",
+            "cat_id": 2
+        },
+        {
+            "name": "UI & UX Web Design and 3D Modeling",
+            "id": 8,
+            "price": "SGD21,000",
+            "INR": "INR1,100,000",
+            "USD": "USD18,000",
+            "cat_id": 2
+        },
+        {
+            "name": "Select Currency",
+            "id": 9,
+            "price": "",
+            "cat_id": 9
+        },
+        {
+            "name": "Indian Rupee (INR) ",
+            "id": 10,
+            "price": "",
+            "cat_id": 9
+        },
+        {
+            "name": "US Dollar (USD) ",
+            "id": 11,
+            "price": "",
+            "cat_id": 9
+        }
+    ]
     }
-]
-}
+    
