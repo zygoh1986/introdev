@@ -50,7 +50,6 @@ function myServices() {
   }
   
   function getServiceInfo(i, z) {
-	  console.log(i,z)
 	if (window.XMLHttpRequest) {
 	  xmlhttp = new XMLHttpRequest();
 	} else {
