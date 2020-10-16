@@ -28,7 +28,8 @@
             "USD": "USD2,000",
             "cat_id": 1,
             "class": "Dev1",
-            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/webdevelopment.jpg"
+            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/webdevelopment.jpg",
+            "des": "Web Development - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
     
         {
@@ -39,7 +40,8 @@
             "USD": "USD15,000",
             "cat_id": 1,
             "class": "Dev2",
-            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/Mobiledevelopment.jpg"
+            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/Mobiledevelopment.jpg",
+            "des": "Mobile Development - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
             "name": "Hybrid Mobile Development",
@@ -49,7 +51,8 @@
             "USD": "USD12,000",
             "cat_id": 1,
             "class": "Dev2",
-            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/hybridmobiledevelopment.jpg"
+            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/hybridmobiledevelopment.jpg",
+            "des": "Hybrid Mobile Development - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
     
         {
@@ -60,7 +63,8 @@
             "USD": "USD12,000",
             "cat_id": 2,
             "class": "Des1",
-            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/UIUXdesign.jpg"
+            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/UIUXdesign.jpg",
+            "des": "UI & UX Web Design - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
             "name": "3D Modeling",
@@ -70,7 +74,8 @@
             "USD": "USD15,000",
             "cat_id": 2,
             "class": "Des2",
-            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/3dmodeling.jpg"
+            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/3dmodeling.jpg",
+            "des": "3D Modeling - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
             "name": "UI & UX Web Design and 3D Modeling",
@@ -80,7 +85,8 @@
             "USD": "USD18,000",
             "cat_id": 2,
             "class": "Des3",
-            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/UIUX3dmodeling.jpg"
+            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/UIUX3dmodeling.jpg",
+            "des": "UI & UX Web Design and 3D Modeling - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
             "name": "Singapore Dollar",
