@@ -14,5 +14,7 @@
     font-size: 1em;
     text-align: center;
     flex-basis: auto;
-    align-self: auto
+    align-self: auto;
+    width: 100%;
+    height: auto;
   }
