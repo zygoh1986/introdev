@@ -26,7 +26,8 @@
             "price": "SGD3,000",
             "INR": "INR159,000",
             "USD": "USD2,000",
-            "cat_id": 1
+            "cat_id": 1,
+            "class": "Dev1"
         },
     
         {
@@ -35,7 +36,8 @@
             "price": "SGD20,000",
             "INR": "INR1,000,000",
             "USD": "USD15,000",
-            "cat_id": 1
+            "cat_id": 1,
+            "class": "Dev2"
         },
         {
             "name": "Hybrid Development",
@@ -43,7 +45,8 @@
             "price": "SGD15,000",
             "INR": "INR810,000",
             "USD": "USD12,000",
-            "cat_id": 1
+            "cat_id": 1,
+            "class": "Dev2"
         },
     
         {
@@ -52,7 +55,8 @@
             "price": "SGD15,000",
             "INR": "INR810,000",
             "USD": "USD12,000",
-            "cat_id": 2
+            "cat_id": 2,
+            "class": "Des1"
         },
         {
             "name": "3D Modeling",
@@ -60,7 +64,8 @@
             "price": "SGD20,000",
             "INR": "INR1,000,000",
             "USD": "USD15,000",
-            "cat_id": 2
+            "cat_id": 2,
+            "class": "Des2"
         },
         {
             "name": "UI & UX Web Design and 3D Modeling",
@@ -68,7 +73,8 @@
             "price": "SGD21,000",
             "INR": "INR1,100,000",
             "USD": "USD18,000",
-            "cat_id": 2
+            "cat_id": 2,
+            "class": "Des3"
         },
         {
             "name": "Singapore Dollar",
