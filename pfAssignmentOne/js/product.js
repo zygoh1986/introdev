@@ -11,8 +11,7 @@ function myServices() {
 		txt1 += '<select id="cat_select" onchange="serviceSelect()">';
 		for (x = 0; x < myObj.catalog.length; x++) {
 		  if (myObj.catalog[x].cat_id == 0) {
-			txt1 +=
-			  '<option value="' + x + '">' + myObj.catalog[x].name + "</option>";
+			txt1 += '<option value="' + x + '">' + myObj.catalog[x].name + "</option>";
 		  }
 		}
 		txt1 += "</select>";
@@ -59,12 +58,12 @@ function myServices() {
 
 	  if (this.readyState == 4 && this.status == 200) {
 		var myObj = JSON.parse(this.responseText);
-		
+		txt2 += '<ul class ="flex-container">'
 		if (i == 1 && z == 9) {
 		  for (x = 0; x < myObj.catalog.length; x++) {
 			if (myObj.catalog[x].cat_id == 1) {
-			  txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
-			  txt2 += "<p> Price: " + myObj.catalog[x].price + "<p>";
+			  txt2 += '<li class='+ id +'> Name: ' + myObj.catalog[x].name + '</li>';
+			  txt2 += '<li class ='+ id +'> Price: ' + myObj.catalog[x].price + '</li>';
   
 			  document.getElementById("searchResult").innerHTML = txt2;
 			}
@@ -74,8 +73,8 @@ function myServices() {
 		else if (i == 1 && z == 10) {
 			for (x = 0; x < myObj.catalog.length; x++) {
 			  if (myObj.catalog[x].cat_id == 1) {
-				txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
-				txt2 += "<p> Price: " + myObj.catalog[x].INR + "<p>";
+				txt2 += '<li class='+ id +'> Name: ' + myObj.catalog[x].name + "</li>";
+				txt2 += '<li class='+ id +'> Name: ' + myObj.catalog[x].INR + "</li>";
 	
 				document.getElementById("searchResult").innerHTML = txt2;
 			  }
@@ -84,8 +83,8 @@ function myServices() {
 		  else if (i == 1 && z == 11) {
 			for (x = 0; x < myObj.catalog.length; x++) {
 			  if (myObj.catalog[x].cat_id == 1) {
-				txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
-				txt2 += "<p> Price: " + myObj.catalog[x].USD + "<p>";
+				txt2 += '<li class=' + id +'> Name: ' + myObj.catalog[x].name + "</li>";
+				txt2 += '<li class='+ id +'> Name: ' + myObj.catalog[x].USD + "</li>";
 	
 				document.getElementById("searchResult").innerHTML = txt2;
 			  }
@@ -100,8 +99,8 @@ function myServices() {
 		else if (i == 2 && z == 9) {
 		  for (x = 0; x < myObj.catalog.length; x++) {
 			if (myObj.catalog[x].cat_id == 2) {
-			  txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
-			  txt2 += "<p> Price: " + myObj.catalog[x].price + "</p>";
+			  txt2 += '<li class='+ id +'> Name: ' + myObj.catalog[x].name + "</li>";
+			  txt2 += '<li class='+ id +'> Name: ' + myObj.catalog[x].price + "</li>";
   
 			  document.getElementById("searchResult").innerHTML = txt2;
 			}
@@ -110,8 +109,8 @@ function myServices() {
 		else if (i == 2 && z == 10) {
 			for (x = 0; x < myObj.catalog.length; x++) {
 			  if (myObj.catalog[x].cat_id == 2) {
-				txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
-				txt2 += "<p> Price: " + myObj.catalog[x].INR + "</p>";
+				txt2 += '<li class='+ id +'> Name: ' + myObj.catalog[x].name + "</li>";
+				txt2 += '<li class='+ id +'> Name: ' + myObj.catalog[x].INR + "</li>";
 	
 				document.getElementById("searchResult").innerHTML = txt2;
 			  }
@@ -120,13 +119,14 @@ function myServices() {
 		  else if (i == 2 && z == 11) {
 			for (x = 0; x < myObj.catalog.length; x++) {
 			  if (myObj.catalog[x].cat_id == 2) {
-				txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
-				txt2 += "<p> Price: " + myObj.catalog[x].USD + "</p>";
+				txt2 += '<li class='+ id +'> Name: ' + myObj.catalog[x].name + "</li>";
+				txt2 += '<li class='+ id +'> Name: ' + myObj.catalog[x].USD + "</li>";
 	
 				document.getElementById("searchResult").innerHTML = txt2;
 			  }
 			}
 		  }
+		  txt2 += '</ul>'
 
 
 	  	}
