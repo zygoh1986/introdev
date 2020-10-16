@@ -1,3 +1,4 @@
+@media (min-width: 1050px) {
 .flex-container {
     display: flex;
     flex-direction: column;
@@ -17,3 +18,4 @@
     flex-basis: auto;
     align-self: auto
   }
+}
