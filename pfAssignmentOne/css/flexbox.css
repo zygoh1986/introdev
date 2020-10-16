@@ -1,10 +1,12 @@
 .flex-container {
     display: flex;
+    flex-direction: column;
     flex-flow: row wrap;
     justify-content: space-around;
     padding: 0;
     margin: 0;
     list-style: none;
+    align-items: center;
   }
   
   .Dev1, .Dev2, .Dev3, .Des1, .Des2, .Des3   {
