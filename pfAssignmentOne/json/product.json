@@ -27,7 +27,8 @@
             "INR": "INR159,000",
             "USD": "USD2,000",
             "cat_id": 1,
-            "class": "Dev1"
+            "class": "Dev1",
+            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/webdevelopment.jpg"
         },
     
         {
@@ -37,16 +38,18 @@
             "INR": "INR1,000,000",
             "USD": "USD15,000",
             "cat_id": 1,
-            "class": "Dev2"
+            "class": "Dev2",
+            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/Mobiledevelopment.jpg"
         },
         {
-            "name": "Hybrid Development",
+            "name": "Hybrid Mobile Development",
             "id": 5,
             "price": "SGD15,000",
             "INR": "INR810,000",
             "USD": "USD12,000",
             "cat_id": 1,
-            "class": "Dev2"
+            "class": "Dev2",
+            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/hybridmobiledevelopment.jpg"
         },
     
         {
@@ -56,7 +59,8 @@
             "INR": "INR810,000",
             "USD": "USD12,000",
             "cat_id": 2,
-            "class": "Des1"
+            "class": "Des1",
+            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/UIUXdesign.jpg"
         },
         {
             "name": "3D Modeling",
@@ -65,7 +69,8 @@
             "INR": "INR1,000,000",
             "USD": "USD15,000",
             "cat_id": 2,
-            "class": "Des2"
+            "class": "Des2",
+            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/3dmodeling.jpg"
         },
         {
             "name": "UI & UX Web Design and 3D Modeling",
@@ -74,7 +79,8 @@
             "INR": "INR1,100,000",
             "USD": "USD18,000",
             "cat_id": 2,
-            "class": "Des3"
+            "class": "Des3",
+            "url": "https://zygoh1986.github.io/introdev/pfAssignmentOne/image/UIUX3dmodeling.jpg"
         },
         {
             "name": "Singapore Dollar",
