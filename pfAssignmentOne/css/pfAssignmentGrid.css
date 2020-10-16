@@ -58,4 +58,20 @@ body {
     grid-row-start: 6;
     grid-row-end: 7;
   }
+
+  .searchBody{
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+  }
+
+  .searchProducts{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
 }

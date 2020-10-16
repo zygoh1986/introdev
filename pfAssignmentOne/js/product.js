@@ -16,7 +16,7 @@ function myServices() {
 		  }
 		}
 		txt1 += "</select>";
-		document.getElementById("servicedetails").innerHTML = txt1;
+		document.getElementById("searchService").innerHTML = txt1;
 	  }
   
 	  if (this.readyState == 4 && this.status == 200) {
@@ -30,7 +30,7 @@ function myServices() {
 		  }
 		}
 		txt1 += "</select>";
-		document.getElementById("servicedetails").innerHTML = txt1;
+		document.getElementById("searchService").innerHTML = txt1;
 	  }
 	};
 	xmlhttp.open(
@@ -68,7 +68,7 @@ function myServices() {
 			  txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
 			  txt2 += "<p> Price: " + myObj.catalog[x].price + "<p>";
   
-			  document.getElementById("servicecost").innerHTML = txt2;
+			  document.getElementById("searchResult").innerHTML = txt2;
 			}
 		  }
 		}
@@ -79,7 +79,7 @@ function myServices() {
 				txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
 				txt2 += "<p> Price: " + myObj.catalog[x].INR + "<p>";
 	
-				document.getElementById("servicecost").innerHTML = txt2;
+				document.getElementById("searchResult").innerHTML = txt2;
 			  }
 			}
 		  }
@@ -89,14 +89,14 @@ function myServices() {
 				txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
 				txt2 += "<p> Price: " + myObj.catalog[x].USD + "<p>";
 	
-				document.getElementById("servicecost").innerHTML = txt2;
+				document.getElementById("searchResult").innerHTML = txt2;
 			  }
 			}
 		  }
 
 		  else if (i == 0) {
 			txt2 += "<p> Please select the above services</p>";
-			document.getElementById("servicecost").innerHTML = txt2;
+			document.getElementById("searchResult").innerHTML = txt2;
 		  }
   
 		else if (i == 2 && z == 9) {
@@ -105,7 +105,7 @@ function myServices() {
 			  txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
 			  txt2 += "<p> Price: " + myObj.catalog[x].price + "</p>";
   
-			  document.getElementById("servicecost").innerHTML = txt2;
+			  document.getElementById("searchResult").innerHTML = txt2;
 			}
 		  }
 		}
@@ -115,7 +115,7 @@ function myServices() {
 				txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
 				txt2 += "<p> Price: " + myObj.catalog[x].INR + "</p>";
 	
-				document.getElementById("servicecost").innerHTML = txt2;
+				document.getElementById("searchResult").innerHTML = txt2;
 			  }
 			}
 		  }
@@ -125,7 +125,7 @@ function myServices() {
 				txt2 += "<h4> Name: " + myObj.catalog[x].name + "</h4>";
 				txt2 += "<p> Price: " + myObj.catalog[x].USD + "</p>";
 	
-				document.getElementById("servicecost").innerHTML = txt2;
+				document.getElementById("searchResult").innerHTML = txt2;
 			  }
 			}
 		  }
