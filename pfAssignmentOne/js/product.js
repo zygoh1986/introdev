@@ -62,7 +62,7 @@ function myServices() {
 		if (i == 1 && z == 9) {
 		  for (x = 0; x < myObj.catalog.length; x++) {
 			if (myObj.catalog[x].cat_id == 1) {
-			  txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+'/>'
+			  txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+' />'
 			  txt2 += '<p class='+ myObj.catalog[x].class +'> Name: ' + myObj.catalog[x].name + '</p><br>';
 			  txt2 += '<p class ='+ myObj.catalog[x].class +'> Price: ' + myObj.catalog[x].price + '</p><br>';
   
@@ -74,7 +74,7 @@ function myServices() {
 		else if (i == 1 && z == 10) {
 			for (x = 0; x < myObj.catalog.length; x++) {
 			  if (myObj.catalog[x].cat_id == 1) {
-				txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+'/>'
+				txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+' />'
 				txt2 += '<p class='+ myObj.catalog[x].class +'> Name: ' + myObj.catalog[x].name + "</p><br>";
 				txt2 += '<p class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].INR + "</p><br>";
 	
@@ -85,7 +85,7 @@ function myServices() {
 		  else if (i == 1 && z == 11) {
 			for (x = 0; x < myObj.catalog.length; x++) {
 			  if (myObj.catalog[x].cat_id == 1) {
-				txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+'/>'
+				txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+' />'
 				txt2 += '<p class=' + myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + "</p> <br>";
 				txt2 += '<p class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].USD + "</p> <br>";
 	
@@ -102,7 +102,7 @@ function myServices() {
 		else if (i == 2 && z == 9) {
 		  for (x = 0; x < myObj.catalog.length; x++) {
 			if (myObj.catalog[x].cat_id == 2) {
-			  txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+'/>'
+			  txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+' />'
 			  txt2 += '<p class='+ myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + "</p> <br>";
 			  txt2 += '<p class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].price + "</p> <br>";
   
@@ -113,7 +113,7 @@ function myServices() {
 		else if (i == 2 && z == 10) {
 			for (x = 0; x < myObj.catalog.length; x++) {
 			  if (myObj.catalog[x].cat_id == 2) {
-				txt2 += '<img src='+myObj.catalog[x].url+ ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+'/>'
+				txt2 += '<img src='+myObj.catalog[x].url+ ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+' />'
 				txt2 += '<p class='+ myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + "</p><br>";
 				txt2 += '<p class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].INR + "</p><br>";
 	
@@ -124,7 +124,7 @@ function myServices() {
 		  else if (i == 2 && z == 11) {
 			for (x = 0; x < myObj.catalog.length; x++) {
 			  if (myObj.catalog[x].cat_id == 2) {
-				txt2 += '<img src='+myObj.catalog[x].url+ ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+'/>'
+				txt2 += '<img src='+myObj.catalog[x].url+ ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+' />'
 				txt2 += '<p class='+ myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + "</p> <br>";
 				txt2 += '<p class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].USD + "</p> <br>";
 	
