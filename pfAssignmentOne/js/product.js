@@ -138,7 +138,7 @@ function myServices() {
 
 	  	}
 	};
-	xmlhttp.open("GET","http://127.0.0.1:5500/pfAssignmentOne/json/product.json",true);
+	xmlhttp.open("GET","https://zygoh1986.github.io/introdev/pfAssignmentOne/json/product.json",true);
 	xmlhttp.send();
   }
   
