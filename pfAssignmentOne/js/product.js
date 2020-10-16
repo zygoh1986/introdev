@@ -21,12 +21,10 @@ function myServices() {
   
 	  if (this.readyState == 4 && this.status == 200) {
 		var myObj = JSON.parse(this.responseText);
-		txt1 +=
-		  '<select id="currency_select" onchange="serviceSelect()">';
+		txt1 += '<select id="currency_select" onchange="serviceSelect()">';
 		for (x = 0; x < myObj.catalog.length; x++) {
 		  if (myObj.catalog[x].cat_id == 9) {
-			txt1 +=
-			  '<option value="' + x + '">' + myObj.catalog[x].name + "</option>";
+			txt1 += '<option value="' + x + '">' + myObj.catalog[x].name + "</option>";
 		  }
 		}
 		txt1 += "</select>";
@@ -61,7 +59,7 @@ function myServices() {
 
 	  if (this.readyState == 4 && this.status == 200) {
 		var myObj = JSON.parse(this.responseText);
-  
+		
 		if (i == 1 && z == 9) {
 		  for (x = 0; x < myObj.catalog.length; x++) {
 			if (myObj.catalog[x].cat_id == 1) {
