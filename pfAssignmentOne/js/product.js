@@ -65,7 +65,7 @@ function myServices() {
 			  txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+' />'
 			  txt2 += '<p class='+ myObj.catalog[x].class +'> Name: ' + myObj.catalog[x].name + ' </p><br>';
 			  txt2 += '<p class ='+ myObj.catalog[x].class +'> Price: ' + myObj.catalog[x].price + ' </p><br>';
-			  txt2 += '<p class ='+ myObj.catalog[x].class +'> Price: ' + myObj.catalog[x].des + ' </p><br>';
+			  txt2 += '<p class ='+ myObj.catalog[x].class +'> Description: ' + myObj.catalog[x].des + ' </p><br>';
   
 			  document.getElementById("searchResult").innerHTML = txt2;
 			}
@@ -78,6 +78,7 @@ function myServices() {
 				txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+' />'
 				txt2 += '<p class='+ myObj.catalog[x].class +'> Name: ' + myObj.catalog[x].name + " </p><br>";
 				txt2 += '<p class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].INR + " </p><br>";
+				txt2 += '<p class ='+ myObj.catalog[x].class +'> Description: ' + myObj.catalog[x].des + ' </p><br>';
 	
 				document.getElementById("searchResult").innerHTML = txt2;
 			  }
@@ -89,6 +90,7 @@ function myServices() {
 				txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+' />'
 				txt2 += '<p class=' + myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + " </p> <br>";
 				txt2 += '<p class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].USD + " </p> <br>";
+				txt2 += '<p class ='+ myObj.catalog[x].class +'> Description: ' + myObj.catalog[x].des + ' </p><br>';
 	
 				document.getElementById("searchResult").innerHTML = txt2;
 			  }
@@ -106,6 +108,7 @@ function myServices() {
 			  txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+' />'
 			  txt2 += '<p class='+ myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + " </p> <br>";
 			  txt2 += '<p class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].price + " </p> <br>";
+			  txt2 += '<p class ='+ myObj.catalog[x].class +'> Description: ' + myObj.catalog[x].des + ' </p><br>';
   
 			  document.getElementById("searchResult").innerHTML = txt2;
 			}
@@ -117,6 +120,7 @@ function myServices() {
 				txt2 += '<img src='+myObj.catalog[x].url+ ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+' />'
 				txt2 += '<p class='+ myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + " </p><br>";
 				txt2 += '<p class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].INR + " </p><br>";
+				txt2 += '<p class ='+ myObj.catalog[x].class +'> Description: ' + myObj.catalog[x].des + ' </p><br>';
 	
 				document.getElementById("searchResult").innerHTML = txt2;
 			  }
@@ -128,6 +132,7 @@ function myServices() {
 				txt2 += '<img src='+myObj.catalog[x].url+ ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+' />'
 				txt2 += '<p class='+ myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + " </p> <br>";
 				txt2 += '<p class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].USD + " </p> <br>";
+				txt2 += '<p class ='+ myObj.catalog[x].class +'> Description: ' + myObj.catalog[x].des + ' </p><br>';
 	
 				document.getElementById("searchResult").innerHTML = txt2;
 			  }
