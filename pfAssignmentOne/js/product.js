@@ -58,13 +58,13 @@ function myServices() {
 
 	  if (this.readyState == 4 && this.status == 200) {
 		var myObj = JSON.parse(this.responseText);
-		txt2 += '<ul class ="flex-container">'
+		txt2 += '<div class ="flex-container">'
 		if (i == 1 && z == 9) {
 		  for (x = 0; x < myObj.catalog.length; x++) {
 			if (myObj.catalog[x].cat_id == 1) {
 			  txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+'/>'
-			  txt2 += '<li class='+ myObj.catalog[x].class +'> Name: ' + myObj.catalog[x].name + '</li><br>';
-			  txt2 += '<li class ='+ myObj.catalog[x].class +'> Price: ' + myObj.catalog[x].price + '</li><br>';
+			  txt2 += '<p class='+ myObj.catalog[x].class +'> Name: ' + myObj.catalog[x].name + '</p><br>';
+			  txt2 += '<p class ='+ myObj.catalog[x].class +'> Price: ' + myObj.catalog[x].price + '</p><br>';
   
 			  document.getElementById("searchResult").innerHTML = txt2;
 			}
@@ -75,8 +75,8 @@ function myServices() {
 			for (x = 0; x < myObj.catalog.length; x++) {
 			  if (myObj.catalog[x].cat_id == 1) {
 				txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+'/>'
-				txt2 += '<li class='+ myObj.catalog[x].class +'> Name: ' + myObj.catalog[x].name + "</li><br>";
-				txt2 += '<li class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].INR + "</li><br>";
+				txt2 += '<p class='+ myObj.catalog[x].class +'> Name: ' + myObj.catalog[x].name + "</p><br>";
+				txt2 += '<p class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].INR + "</p><br>";
 	
 				document.getElementById("searchResult").innerHTML = txt2;
 			  }
@@ -86,8 +86,8 @@ function myServices() {
 			for (x = 0; x < myObj.catalog.length; x++) {
 			  if (myObj.catalog[x].cat_id == 1) {
 				txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+'/>'
-				txt2 += '<li class=' + myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + "</li> <br>";
-				txt2 += '<li class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].USD + "</li> <br>";
+				txt2 += '<p class=' + myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + "</p> <br>";
+				txt2 += '<p class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].USD + "</p> <br>";
 	
 				document.getElementById("searchResult").innerHTML = txt2;
 			  }
@@ -103,8 +103,8 @@ function myServices() {
 		  for (x = 0; x < myObj.catalog.length; x++) {
 			if (myObj.catalog[x].cat_id == 2) {
 			  txt2 += '<img src='+myObj.catalog[x].url + ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+'/>'
-			  txt2 += '<li class='+ myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + "</li> <br>";
-			  txt2 += '<li class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].price + "</li> <br>";
+			  txt2 += '<p class='+ myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + "</p> <br>";
+			  txt2 += '<p class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].price + "</p> <br>";
   
 			  document.getElementById("searchResult").innerHTML = txt2;
 			}
@@ -114,8 +114,8 @@ function myServices() {
 			for (x = 0; x < myObj.catalog.length; x++) {
 			  if (myObj.catalog[x].cat_id == 2) {
 				txt2 += '<img src='+myObj.catalog[x].url+ ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+'/>'
-				txt2 += '<li class='+ myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + "</li><br>";
-				txt2 += '<li class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].INR + "</li><br>";
+				txt2 += '<p class='+ myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + "</p><br>";
+				txt2 += '<p class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].INR + "</p><br>";
 	
 				document.getElementById("searchResult").innerHTML = txt2;
 			  }
@@ -125,8 +125,8 @@ function myServices() {
 			for (x = 0; x < myObj.catalog.length; x++) {
 			  if (myObj.catalog[x].cat_id == 2) {
 				txt2 += '<img src='+myObj.catalog[x].url+ ' alt='+myObj.catalog[x].name+' class ='+myObj.catalog[x].class+'/>'
-				txt2 += '<li class='+ myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + "</li> <br>";
-				txt2 += '<li class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].USD + "</li> <br>";
+				txt2 += '<p class='+ myObj.catalog[x].class  +'> Name: ' + myObj.catalog[x].name + "</p> <br>";
+				txt2 += '<p class='+ myObj.catalog[x].class  +'> Price: ' + myObj.catalog[x].USD + "</p> <br>";
 	
 				document.getElementById("searchResult").innerHTML = txt2;
 			  }
