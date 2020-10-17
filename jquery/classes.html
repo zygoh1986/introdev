@@ -4,11 +4,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("button").click(function(){
+  $("#btn1").click(function(){
     $("h1, h2, p").addClass("blue");
     $("div").addClass("important");
   });
 });
+
+$(document).ready(function(){
+  $("#btn2").click(function(){
+    $("h1, h2, p").removeClass("blue");
+    $("div").hide();
+  });
+});
+
 </script>
 <style>
 .important {
@@ -31,7 +39,8 @@ $(document).ready(function(){
 
 <div>This is some important text!</div><br>
 
-<button>Add classes to elements</button>
+<button id="btn1">Add classes to elements</button>
+<button id="btn2">Remove classes to elements</button>
 
 </body>
 </html>
