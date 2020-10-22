@@ -12,9 +12,14 @@
   flex-direction: column;
   
   /* Then we define how is distributed the remaining space */
-  justify-content: space-around;
   
   padding: 0;
   margin: 3;
   list-style: none;
+  align-content: stretch;
+}
+
+#form-group-row
+{
+  flex-grow: 20;
 }

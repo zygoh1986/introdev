@@ -1,0 +1,67 @@
+<script src="tinytest.js"></script>
+<script src="adder.js"></script>
+<script>
+    // tests({
+
+    //     'adds numbers': function() {
+    //         eq(6, add(2, 4));
+    //         eq(6.6, add(2.6, 4));
+    //     },
+
+    //     'subtracts numbers': function() {
+    //         eq(-2, add(2, -4));
+    //     },
+
+    // });
+    function forEach(array, callback, configurableThisObject) {
+        let forEachCallback = callback;
+        // if configurableThisObject exists then run something.
+        if (configurableThisObject) {
+            // bind configurableThisObject to callback function
+            forEachCallback = callback.bind(configurableThisObject);
+        }
+        for (let i = 0; i < array.length; i++) {
+            // test 3 needs to parse in the second argument
+            forEachCallback(array[i], i, array);
+        }
+    }
+    tests({
+        'It should run the callback function array.length times.': function() {
+            let counter = 0;
+            forEach([1, 2, 3], function() {
+                counter++;
+            });
+            eq(counter, 3);
+        },
+        'It should pass in the ith element as the first argument to the callback.': function() {
+            forEach([1], function(number) {
+                eq(number, 1);
+            });
+        },
+        'It should pass in the ith position as the second argument to the callback.': function() {
+            forEach([1], function(number, index) {
+                // index ==== 0
+                eq(index, 0);
+            });
+        },
+        'It should pass in the original array as the third argument to the callback': function() {
+            let testArray = [1, 2, 3];
+            forEach(testArray, function(number, index, originalArray) {
+                eq(originalArray, testArray);
+            });
+        },
+        'It should accept a configurable this object': function() {
+            /* pass in array */
+            /* pass in callback */
+            /* pass in this object */
+            forEach([1], function() {
+                // execution of callback inside here
+                // this should be equal to thisObject
+                // this.description should be equal to 'configurable this object'
+                eq(this.description, 'configurable this object');
+            }, {
+                description: 'configurable this object'
+            });
+        }
+    });
+</script>
