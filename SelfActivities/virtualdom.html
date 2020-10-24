@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <script type="text/babel">
+    function showClock()
+    {
+        const element = (
+            <div>
+                <h1> we show the current time on our site and </h1>
+                <h2>It is {new Date().toLocaleTimeString()}. </h2>
+                </div>
+        );
+        ReactDOM.render(element, document.getElementById('mydiv'));
+    }
+
+    setInterval(showClock, 1000);
+
+    document.getElementById("mydiv").innerHTML = "<h1> we show the current time on our site and" + new Date().toLocaleTimeString()+"</h1>"
+    
+    </script>
+</body>
+</html>
