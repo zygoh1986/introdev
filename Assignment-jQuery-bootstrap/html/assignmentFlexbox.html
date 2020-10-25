@@ -8,32 +8,30 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
-    <form>
-    <div class="flex-container">
-        <div class="form-group-row">
-            <label for="inputEmail" class="col-sm-1 m-10 col-form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-        </div> <br> 
-        <div class="form-group-row">
-            <label for="inputPassword" class="col-sm-1 col-form-label">Password</label>
-            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-        </div> <br>
-        <div class="form-group-row">
-            <label for="feedBack" class="col-sm-1 col-form-label" maxlength="200">Feedback</label>
-            <textarea type="text" class="form-control" id="inputText" placeholder="Feedback"> </textarea>
-        </div>
-            <div class="form-group row">
-                <div class="col-sm-5 offset-sm-2">
-                    <span id ="numOfChar">200</span> Character(s) Remaining
-                </div>
-            </div>
+    <div class="flexcontainer">
+      <form>
+        <ul class="flexouter">
+          <li>
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Email">
+          </li>
+          <li>
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" placeholder="Full Name">
+          </li>
+          <li>
+            <label for="feedback">Feedback</label>
+            <textarea type="text" id="feedback" placeholder="feedback"></textarea>
+          </li>
+          <li>
+            <span id ="numOfChar">200 Character(s) Remaining</span>
+          </li>
+          <li>
+            <button type="submit" class"button">Submit</button>
+          </li>
+              
+        </ul>
 
-            <div class="form-group row">
-                <div class="col-sm-5 offset-sm-1">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-    
     </form>
 
     <script>
@@ -49,63 +47,3 @@
 </html>
 
 
-<!--
-    <div class="container">
-  <form>
-    <ul class="flex-outer">
-      <li>
-        <label for="first-name">First Name</label>
-        <input type="text" id="first-name" placeholder="Enter your first name here">
-      </li>
-      <li>
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" placeholder="Enter your last name here">
-      </li>
-      <li>
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email here">
-      </li>
-      <li>
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" placeholder="Enter your phone here">
-      </li>
-      <li>
-        <label for="message">Message</label>
-        <textarea rows="6" id="message" placeholder="Enter your message here"></textarea>
-      </li>
-      <li>
-        <p>Age</p>
-        <ul class="flex-inner">
-          <li>
-            <input type="checkbox" id="twenty-to-twentynine">
-            <label for="twenty-to-twentynine">20-29</label>
-          </li>
-          <li>
-            <input type="checkbox" id="thirty-to-thirtynine">
-            <label for="thirty-to-thirtynine">30-39</label>
-          </li>
-          <li>
-            <input type="checkbox" id="fourty-to-fourtynine">
-            <label for="fourty-to-fourtynine">40-49</label>
-          </li>
-          <li>
-            <input type="checkbox" id="fifty-to-fiftynine">
-            <label for="fifty-to-fiftynine">50-59</label>
-          </li>
-          <li>
-            <input type="checkbox" id="sixty-to-sixtynine">
-            <label for="sixty-to-sixtynine">60-69</label>
-          </li>
-          <li>
-            <input type="checkbox" id="other">
-            <label for="other">Other</label>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <button type="submit">Submit</button>
-      </li>
-    </ul>
-  </form>
-</div>
--->
