@@ -11,7 +11,7 @@ function App() {
     results: [],
     selected: {}
   });
-  const apiurl = "http://www.omdbapi.com/?apikey=dfe6d885";
+  const apiurl = "http://www.omdbapi.com/?i=tt3896198&apikey=e1d815be";
 
   const search = (e) => {
     if (e.key === "Enter") {
@@ -54,7 +54,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Movie Database</h1>
+        <h1>Movies Application</h1>
       </header>
       <main>
         <Search handleInput={handleInput} search={search} />
