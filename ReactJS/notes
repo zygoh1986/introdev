@@ -1,0 +1,10 @@
+1. React Hooks
+    How many types of components are there in reactJS (2)
+        Class
+            Page -> parameters / arguments
+            State -> JS object to capture properties
+        Functions
+            Can accept arguments but they do not have State
+            I use hooks to use state in functional components as well
+
+    Simple function useState is called when we have to interact with state for functional components
