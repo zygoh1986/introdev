@@ -1,6 +1,5 @@
-import React, {Component, useState} from 'react';
+import React, {Component} from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import firebase from './assets/config'
 
 import Navigation from './components/Navigation/Navigation'
 import Scan from './containers/Scan/Scan'

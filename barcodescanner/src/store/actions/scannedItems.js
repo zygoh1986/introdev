@@ -34,41 +34,39 @@ export const startScanning = () => {
       dispatch(spinnerOn())
 
       //let url = URL_PATH + barcode + URL_EXTENSION + APIKEY
-      
       let req = new Request(firebase, {
          headers: {
-           'Access-Control-Allow-Origin': 'http://localhost:3000'
+           'Access-Control-Allow-Origin': 'https://localhost:3000'
          },
          mode: 'no-cors'
        })
-      console.log(req);
       let product = null
       fetch(req)
       .catch(err => console.log('error', err))
-      .then(res => res.json())
-      .then(res => {
-      if (res.status !== 200) {
-          return res.status
-        }
-        })
-
+      // .then(res => res.json())
       // .then(res => {
-      //   //console.log(res.status)
-      //   if(res.status !== 200){
-      //     return {
-      //       resStatus: res.status
-      //     }
-      //   } else if (res.status === 200) {
-      //     return res.json()
+      // if (res.status !== 200) {
+      //     return res.status
       //   }
-      // })
+      //   })
+
+       .then(res => {
+         //console.log(res.status)
+         if(res.status !== 200){
+          return {
+             resStatus: res.status
+          }
+         } else if (res.status === 200) {
+           return res.json()
+         }
+       })
       
 
         .then(parsedRes => {
-      //    if(parsedRes.resStatus !== 200){
-      //      parsedRes.resStatus === 0 ? dispatch(invalidBarcode('noAPI')) : dispatch(invalidBarcode('invalid'))
+          if(parsedRes.resStatus !== 200){
+            parsedRes.resStatus === 0 ? dispatch(invalidBarcode('noAPI')) : dispatch(invalidBarcode('invalid'))
            
-      // } else {
+       } else {
           product = {
             names: parsedRes.data[0].names,
             description: parsedRes.data[0].description,
@@ -81,7 +79,7 @@ export const startScanning = () => {
             // description: parsedRes.products[0].description,
           }
           dispatch(productDetected(product))
-        //} 
+        } 
       })
     }
     }
