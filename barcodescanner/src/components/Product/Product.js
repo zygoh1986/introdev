@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import './Product.css'
+//import barcodes from '../../assets/config'
+
 class Product extends Component {
   render() {
     return (
@@ -8,22 +10,32 @@ class Product extends Component {
         <button 
           onClick={this.props.click ? this.props.click : this.props.view}
           className="btn btn-secondary btn-md btn-block btn-scan-again">{this.props.click ? 'Scan Again' : 'View Cart' }</button>
-        <table className="table table-striped">
-          <tbody>
-            <tr>
-              <td>Name</td>
-              <td>{this.props.data.names}</td>
-            </tr>
-            <tr>
-              <td>Description</td>
-              <td>{this.props.data.income}</td>
-            </tr>
-            <tr>
-              <td>Income</td>
-              <td>{this.props.data.income}</td>
-            </tr>
-          </tbody>
-        </table> 
+          {this.state.data.map((barcodes)=>
+          {
+            return (
+              <table className="table table-striped">
+              <tbody>
+                <tr>
+                  <td>Barcode</td>
+                  <td>{barcodes.barcode}</td>
+                </tr>
+                <tr>
+                  <td>Name</td>
+                  <td>{barcodes.name}</td>
+                </tr>
+                <tr>
+                  <td>Description</td>
+                  <td>{barcodes.description}</td>
+                </tr>
+                <tr>
+                  <td>Income</td>
+                  <td>{barcodes.income}</td>
+                </tr>
+              </tbody>
+            </table>  
+            )
+          })}
+        
         </div>
       </Fragment>
     )

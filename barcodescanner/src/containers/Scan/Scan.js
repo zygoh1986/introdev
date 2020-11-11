@@ -12,6 +12,7 @@ class Scan extends Component {
   constructor(props){
     super(props);
     this._onBarcodeDetect = this._onBarcodeDetect.bind(this)
+    this.state = {datascan : []}
   }
 
   _onBarcodeDetect(barcode){
