@@ -1,6 +1,6 @@
 
-//import {APIKEY, URL_PATH, URL_EXTENSION} from '../../assets/config'
-import firebase from '../../assets/config'
+import {JSON_PATH, URL_PATH} from '../../assets/config'
+//import firebase from '../../assets/config'
 
 export const startScanning = () => {
   return {
@@ -29,68 +29,68 @@ export const deleteItem = (i) => {
 }
 
 export const processBarcode = (barcode) => {
+  return dispatch => {
+    dispatch(spinnerOn())
 
-    firebase.database().ref('data').on('value', (snapshot) => {
-      let data = [];
-      snapshot.forEach(snap => {
-        data.push(snap.val());
-      });
-      this.setState({datascan: data})
-      return dispatch => {
-        dispatch(spinnerOn())
-      dispatch(productDetected(data))
+
+  //   firebase.database().ref('data').on('value', (snapshot) => {
+  //     let data = [];
+  //     snapshot.forEach(snap => {
+  //       data.push(snap.val());
+  //     });
+      
+  //     this.setState({datascan: data})
+
+
+  //   dispatch(productDetected(data))
+  // });
+  
+    
+    let url = URL_PATH + barcode + JSON_PATH //+ APIKEY
+    
+    let req = new Request(url , {
+      headers: {
+        'Access-Control-Allow-Origin': 'http://localhost:3000'
+      },
+      mode: 'no-cors'
+    })
+    
+    let product = null
+    fetch(req)
+    .catch(err => console.log('error', err))
+    .then(res => {
+      console.log(res.status)
+      if(res.status !== 200){
+        return {
+          resStatus: res.status
+        }
+      } else if(res.status === 200) {
+        return res.json()
       }
-    });
-
-
-  
-
-
-
-  
-    
-
-    
-    // let url = URL_PATH + barcode + URL_EXTENSION + APIKEY
-    
-    // let req = new Request(url , {
-    //   headers: {
-    //     'Access-Control-Allow-Origin': 'http://localhost:3000'
-    //   },
-    //   mode: 'no-cors'
-    // })
-    
-    // let product = null
-    // fetch(req)
-    // .catch(err => console.log('error', err))
-    // .then(res => {
-    //   console.log(res.status)
-    //   if(res.status !== 200){
-    //     return {
-    //       resStatus: res.status
-    //     }
-    //   } else if(res.status === 200) {
-    //     return res.json()
-    //   }
-    // })
-    // .then(parsedRes => {
-    //   if(parsedRes.resStatus !== 200){
-    //     parsedRes.resStatus === 0 ? dispatch(invalidBarcode('noAPI')) : dispatch(invalidBarcode('invalid'))
-    //   } else {
-    //     product = {
-    //       barcode_number: parsedRes.products[0].barcode_number,
-    //       barcode_type: parsedRes.products[0].barcode_type,
-    //       product_name: parsedRes.products[0].product_name,
-    //       product_image: parsedRes.products[0].images[0],
-    //       manufacturer: parsedRes.products[0].manufacturer,
-    //       brand: parsedRes.products[0].brand,
-    //       category: parsedRes.products[0].category,
-    //       description: parsedRes.products[0].description,
-    //     }
-    //     dispatch(productDetected(product))
-    //   } 
-    // })
+    })
+    .then(parsedRes => {
+      if(parsedRes.resStatus !== 200){
+        parsedRes.resStatus === 0 ? dispatch(invalidBarcode('noAPI')) : dispatch(invalidBarcode('invalid'))
+      } else {
+        product = {
+          barcode_number: parsedRes.products[0].barcode_number,
+          name: parsedRes.data[0].name,
+          description: parsedRes.data[0].description,
+          income: parsedRes.data[0].income,
+          // barcode_number: parsedRes.products[0].barcode_number,
+          // barcode_type: parsedRes.products[0].barcode_type,
+          // product_name: parsedRes.products[0].product_name,
+          // product_image: parsedRes.products[0].images[0],
+          // manufacturer: parsedRes.products[0].manufacturer,
+          // brand: parsedRes.products[0].brand,
+          // category: parsedRes.products[0].category,
+          // description: parsedRes.products[0].description,
+        }
+        dispatch(productDetected(product))
+      } 
+    })
   }
+}
   
 
 export const spinnerOn = () => {
