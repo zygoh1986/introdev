@@ -1,5 +1,5 @@
 
-import {JSON_PATH, URL_PATH, APIKEY} from '../../assets/config'
+import {URL_PATH, PRINT} from '../../assets/config'
 //import firebase from '../../assets/config'
 
 export const startScanning = () => {
@@ -32,21 +32,7 @@ export const processBarcode = (barcode) => {
   return dispatch => {
     dispatch(spinnerOn())
 
-
-  //   firebase.database().ref('data').on('value', (snapshot) => {
-  //     let data = [];
-  //     snapshot.forEach(snap => {
-  //       data.push(snap.val());
-  //     });
-      
-  //     this.setState({datascan: data})
-
-
-  //   dispatch(productDetected(data))
-  // });
-  
-    
-    let url = URL_PATH + barcode + JSON_PATH + APIKEY
+    let url = URL_PATH + '"'+ barcode +'"' + PRINT
     
     
     let req = new Request(url , {
@@ -60,7 +46,7 @@ export const processBarcode = (barcode) => {
     fetch(req)
     .catch(err => console.log('error', err))
     .then(res => {
-      //console.log(res.status)
+      console.log(res.status)
       if(res.status !== 200){
         return {
           resStatus: res.status

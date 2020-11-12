@@ -1,22 +1,24 @@
 {
-  "data" : [
+"shoppingcart": {
+  "data": [
     {
-      "barcode" : "buyeducation",
-      "description" : "Invest in yourself to propel",
-      "income" : -20000,
-      "name" : "education"
+      "barcode": "edu",
+      "description": "Invest in yourself to propel",
+      "income": 20000,
+      "name": "education"
     },
     {
-      "barcode" : "buyinsurance",
-      "description" : "Invest in insurance, keep yourself safe",
-      "income" : -2000,
-      "name" : "insurance"
+      "barcode": "ins",
+      "description": "Invest in insurance, keep yourself safe",
+      "income": 2000,
+      "name": "insurance"
     },
     {
-      "barcode" : "propertyagent",
-      "description" : "This is a property agent description",
-      "income" : 50000,
-      "name" : "Property Agent"
+      "barcode": "jobpro",
+      "description": "This is a property agent description",
+      "income": 50000,
+      "name": "Property Agent"
     }
   ]
+}
 }

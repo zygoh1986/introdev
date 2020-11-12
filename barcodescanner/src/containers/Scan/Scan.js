@@ -4,6 +4,7 @@ import {processBarcode, startScanning} from '../../store/actions/index'
 import Spinner from '../../components/Spinner/Spinner'
 import Scanner from '../../components/Scanner/Scanner'
 import Product from '../../components/Product/Product'
+//import firebase from '../../assets/config'
 import './Scan.css'
 
 
@@ -12,12 +13,34 @@ class Scan extends Component {
   constructor(props){
     super(props);
     this._onBarcodeDetect = this._onBarcodeDetect.bind(this)
-    this.state = {datascan : []}
+    this.state = {data : []}
   }
 
   _onBarcodeDetect(barcode){
     this.props.process(barcode)
   }
+
+  // componentDidMount() {
+  //   const dataRef = firebase.database().ref('data');
+  //   dataRef.on('value', (snapshot)=> {
+  //     let scandata = snapshot.val();
+  //     let newState = [];
+  //     for (let data in scandata) {
+  //       newState.push ({
+  //         id: data,
+  //         name: scandata[data].name,
+  //         description: scandata[data].description,
+  //         income: scandata[data].income
+
+  //       });
+  //     }
+  //     this.setState({
+  //       scandata: newState
+  //     })
+  //   })
+  // }
+  
+
  
   render() {
     

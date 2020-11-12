@@ -52,7 +52,7 @@
     }
 
     const theDate = yr + ' ' + filter(mon) + ' ' + filter(date)
-    axios.post('https://barcode-50dd3.firebaseio.com/data' + theDate + '.json', user)
+    axios.post('https://barcode-50dd3.firebaseio.com/shoppingcart/data' + theDate + '.json', user)
     .then(res => {return(res.data)})
     .catch(err => console.log(err.data))
   </script>
