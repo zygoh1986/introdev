@@ -1,5 +1,5 @@
 
-import {JSON_PATH, URL_PATH} from '../../assets/config'
+import {JSON_PATH, URL_PATH, APIKEY} from '../../assets/config'
 //import firebase from '../../assets/config'
 
 export const startScanning = () => {
@@ -46,7 +46,8 @@ export const processBarcode = (barcode) => {
   // });
   
     
-    let url = URL_PATH + barcode + JSON_PATH //+ APIKEY
+    let url = URL_PATH + barcode + JSON_PATH + APIKEY
+    
     
     let req = new Request(url , {
       headers: {
@@ -54,12 +55,12 @@ export const processBarcode = (barcode) => {
       },
       mode: 'no-cors'
     })
-    
+    console.log(req)
     let product = null
     fetch(req)
     .catch(err => console.log('error', err))
     .then(res => {
-      console.log(res.status)
+      //console.log(res.status)
       if(res.status !== 200){
         return {
           resStatus: res.status
@@ -73,7 +74,7 @@ export const processBarcode = (barcode) => {
         parsedRes.resStatus === 0 ? dispatch(invalidBarcode('noAPI')) : dispatch(invalidBarcode('invalid'))
       } else {
         product = {
-          barcode_number: parsedRes.products[0].barcode_number,
+
           name: parsedRes.data[0].name,
           description: parsedRes.data[0].description,
           income: parsedRes.data[0].income,

@@ -18,6 +18,7 @@
 // export default firebase;
 
 //export const APIKEY = 'AIzaSyAt7f8tedZPATupmg6dC0BfNvIwNuGXR5g'
-export const URL_PATH = 'https://barcode-50dd3.firebaseio.com/data/data?barcode=' 
+export const URL_PATH = 'https://barcode-50dd3.firebaseio.com/data/barcode=' 
 export const JSON_PATH = '/barcode-50dd3.json'
+export const APIKEY = '?auth=AIzaSyAt7f8tedZPATupmg6dC0BfNvIwNuGXR5g'
 //export const URL_EXTENSION = '&formatted=y&key='
