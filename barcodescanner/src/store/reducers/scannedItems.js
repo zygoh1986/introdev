@@ -55,7 +55,7 @@ const scannedItems = (state = initialState, action) => {
         productScanned: null
       }
     case 'SET_ITEM': 
-      let selected = state.scannedItems.filter((item, i)=> {
+      let selected = state.scannedItems.filter((data, i)=> {
           return i === action.payload
       })
       return {
@@ -65,7 +65,7 @@ const scannedItems = (state = initialState, action) => {
       case 'DELETE_ITEM':
         return {
           ...state,
-          scannedItems: state.scannedItems.filter((item, i) => {
+          scannedItems: state.scannedItems.filter((data, i) => {
             return i !== action.payload
           })
         }

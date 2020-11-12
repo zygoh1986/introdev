@@ -32,38 +32,36 @@ export const processBarcode = (barcode) => {
   return dispatch => {
     dispatch(spinnerOn())
 
-    let url = URL_PATH + '"'+ barcode +'"' + PRINT
-    
-    
-    let req = new Request(url , {
-      headers: {
-        'Access-Control-Allow-Origin': 'http://localhost:3000'
-      },
-      mode: 'no-cors'
-    })
-    console.log(req)
+    let url = URL_PATH + '"'+barcode+'"' + PRINT
+    let req = new Request(url) 
     let product = null
     fetch(req)
     .catch(err => console.log('error', err))
+    
     .then(res => {
-      console.log(res.status)
+      //console.log(res)
       if(res.status !== 200){
         return {
           resStatus: res.status
         }
       } else if(res.status === 200) {
         return res.json()
+        
       }
+  
     })
+   
     .then(parsedRes => {
-      if(parsedRes.resStatus !== 200){
-        parsedRes.resStatus === 0 ? dispatch(invalidBarcode('noAPI')) : dispatch(invalidBarcode('invalid'))
-      } else {
+      //console.log(parsedRes)
+       if(parsedRes == null){
+         parsedRes === 0 ? dispatch(invalidBarcode('noAPI')) : dispatch(invalidBarcode('invalid'))
+       } else {
         product = {
-
-          name: parsedRes.data[0].name,
-          description: parsedRes.data[0].description,
-          income: parsedRes.data[0].income,
+          
+          data_barcode: parsedRes.products.barcode,
+          data_name: parsedRes.products.name,
+          data_description: parsedRes.products.description,
+          data_income: parsedRes.products.income,
           // barcode_number: parsedRes.products[0].barcode_number,
           // barcode_type: parsedRes.products[0].barcode_type,
           // product_name: parsedRes.products[0].product_name,
@@ -73,6 +71,7 @@ export const processBarcode = (barcode) => {
           // category: parsedRes.products[0].category,
           // description: parsedRes.products[0].description,
         }
+        
         dispatch(productDetected(product))
       } 
     })

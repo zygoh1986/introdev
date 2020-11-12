@@ -13,34 +13,12 @@ class Scan extends Component {
   constructor(props){
     super(props);
     this._onBarcodeDetect = this._onBarcodeDetect.bind(this)
-    this.state = {data : []}
+
   }
 
   _onBarcodeDetect(barcode){
     this.props.process(barcode)
   }
-
-  // componentDidMount() {
-  //   const dataRef = firebase.database().ref('data');
-  //   dataRef.on('value', (snapshot)=> {
-  //     let scandata = snapshot.val();
-  //     let newState = [];
-  //     for (let data in scandata) {
-  //       newState.push ({
-  //         id: data,
-  //         name: scandata[data].name,
-  //         description: scandata[data].description,
-  //         income: scandata[data].income
-
-  //       });
-  //     }
-  //     this.setState({
-  //       scandata: newState
-  //     })
-  //   })
-  // }
-  
-
  
   render() {
     
