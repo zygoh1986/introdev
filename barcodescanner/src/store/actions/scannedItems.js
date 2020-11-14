@@ -29,55 +29,46 @@ export const deleteItem = (i) => {
 }
 
 export const processBarcode = (barcode) => {
+
   return dispatch => {
     dispatch(spinnerOn())
 
+  
     let url = URL_PATH + '"'+barcode+'"' + PRINT
     let req = new Request(url) 
     let product = null
     fetch(req)
     .catch(err => console.log('error', err))
-    
-    .then(res => {
-      //console.log(res)
-      if(res.status !== 200){
-        return {
-          resStatus: res.status
-        }
-      } else if(res.status === 200) {
-        return res.json()
-        
-      }
-  
-    })
-   
-    .then(parsedRes => {
-      //console.log(parsedRes)
-       if(parsedRes == null){
-         parsedRes === 0 ? dispatch(invalidBarcode('noAPI')) : dispatch(invalidBarcode('invalid'))
-       } else {
-        product = {
-          
-          data_barcode: parsedRes.products.barcode,
-          data_name: parsedRes.products.name,
-          data_description: parsedRes.products.description,
-          data_income: parsedRes.products.income,
-          // barcode_number: parsedRes.products[0].barcode_number,
-          // barcode_type: parsedRes.products[0].barcode_type,
-          // product_name: parsedRes.products[0].product_name,
-          // product_image: parsedRes.products[0].images[0],
-          // manufacturer: parsedRes.products[0].manufacturer,
-          // brand: parsedRes.products[0].brand,
-          // category: parsedRes.products[0].category,
-          // description: parsedRes.products[0].description,
-        }
-        
-        dispatch(productDetected(product))
-      } 
-    })
+
+    .then(response => {
+      console.log(response)
+        if (response.status !== 200 ) {
+        console.log('Error Status code:' + response.status)
+        dispatch(invalidBarcode('invalid'))
+        } else {
+              return response.json().then( parsedRes => {
+                console.log(parsedRes)
+              
+           
+                  product = {
+                  barcode: parsedRes.barcode,
+                  name: parsedRes.name,
+                  description: parsedRes.description,
+                  income: parsedRes.income
+                  }
+                
+
+                  console.log(product)
+                  dispatch(productDetected(product))
+            
+                
+
+              }) //end return
+          }// end else
+        })
+
   }
 }
-  
 
 export const spinnerOn = () => {
   return {

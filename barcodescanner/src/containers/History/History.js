@@ -30,12 +30,14 @@ if (this.props.scannedItems.length >= 1){
           <table className="table table-striped">
             <thead>
               <tr>
+                <th scope="col">S/N</th>
                 <th scope="col">Name</th>
                 <th scope="col">Description</th>
                 <th scope="col">Income</th>
               </tr>
             </thead>
             <tbody>
+              
               {this.props.scannedItems.map((scannedItem, i) => {
                 return (
                   <tr key={i}>
