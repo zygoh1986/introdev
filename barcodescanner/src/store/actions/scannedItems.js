@@ -42,26 +42,46 @@ export const processBarcode = (barcode) => {
 
     .then(response => {
       console.log(response)
-        if (response.status !== 200 ) {
+        if (response.status !== 200  ) {
         console.log('Error Status code:' + response.status)
-        dispatch(invalidBarcode('invalid'))
         } else {
               return response.json().then( parsedRes => {
                 console.log(parsedRes)
               
-           
+                if (parsedRes[0])
+                {
                   product = {
-                  barcode: parsedRes.barcode,
-                  name: parsedRes.name,
-                  description: parsedRes.description,
-                  income: parsedRes.income
+                  barcode: parsedRes[0].barcode,
+                  name: parsedRes[0].name,
+                  description: parsedRes[0].description,
+                  income: parsedRes[0].income,
                   }
-                
-
-                  console.log(product)
                   dispatch(productDetected(product))
-            
-                
+                }
+                  else if (parsedRes[1])
+                  {
+                    product = {
+                      barcode: parsedRes[1].barcode,
+                      name: parsedRes[1].name,
+                      description: parsedRes[1].description,
+                      income: parsedRes[1].income,
+                      }
+                      dispatch(productDetected(product))
+                  }
+                  else if (parsedRes[2])
+                  {
+                    product = {
+                      barcode: parsedRes[2].barcode,
+                      name: parsedRes[2].name,
+                      description: parsedRes[2].description,
+                      income: parsedRes[2].income,
+                      }
+                      dispatch(productDetected(product))
+                  }
+                  else
+                  {
+                    dispatch(invalidBarcode('invalid'))
+                  }
 
               }) //end return
           }// end else
