@@ -36,7 +36,7 @@ if (this.props.scannedItems.length >= 1){
                 <th scope="col">S/N</th>
                 <th scope="col">Name</th>
                 <th scope="col">Description</th>
-                <th scope="col">Income</th>
+                <th scope="col">Price</th>
               </tr>
             </thead>
             <tbody>
@@ -47,7 +47,7 @@ if (this.props.scannedItems.length >= 1){
                     <th scope="row">{i+1}</th> 
                     <td>{scannedItem.name}</td>
                     <td>{scannedItem.description}</td>
-                    <td>{scannedItem.income}</td>
+                    <td>{scannedItem.price}</td>
                     <td><button 
                           type="button" 
                           onClick={()=>this.props.setItem(i)}

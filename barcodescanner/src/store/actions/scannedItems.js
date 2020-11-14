@@ -57,7 +57,7 @@ export const processBarcode = (barcode) => {
                   barcode: parsedRes[0].barcode,
                   name: parsedRes[0].name,
                   description: parsedRes[0].description,
-                  income: parsedRes[0].income,
+                  price: parsedRes[0].price,
                   }
                   dispatch(productDetected(product))
                 }
@@ -67,7 +67,7 @@ export const processBarcode = (barcode) => {
                       barcode: parsedRes[1].barcode,
                       name: parsedRes[1].name,
                       description: parsedRes[1].description,
-                      income: parsedRes[1].income,
+                      price: parsedRes[1].price,
                       }
                       dispatch(productDetected(product))
                   }
@@ -77,7 +77,7 @@ export const processBarcode = (barcode) => {
                       barcode: parsedRes[2].barcode,
                       name: parsedRes[2].name,
                       description: parsedRes[2].description,
-                      income: parsedRes[2].income,
+                      price: parsedRes[2].price,
                       }
                       dispatch(productDetected(product))
                   }

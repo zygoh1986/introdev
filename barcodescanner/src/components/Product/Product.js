@@ -30,8 +30,8 @@ class Product extends Component {
                   <td>{this.props.item.description}</td>
                 </tr>
                 <tr>
-                  <td>Income</td>
-                  <td>{this.props.item.income}</td>
+                  <td>Price</td>
+                  <td>{this.props.item.price}</td>
                 </tr>
               </tbody>
             </table>  
