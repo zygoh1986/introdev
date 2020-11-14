@@ -1,3 +1,7 @@
+/**
+ * This JS file is to initiate the camera
+ */
+
 import React, { Component, Fragment } from 'react'
 import Quagga from 'quagga'
 import './Scanner.css'
@@ -39,8 +43,9 @@ class Scanner extends Component {
     
   }
 
+  // res - Result of the scanning the barcode
   onDetect(res){
-    // console.log(res.codeResult.code)
+    //console.log(res.codeResult.code)
     Quagga.stop()
     Quagga.offProcessed()
     this.props.onBarcodeDetect(res.codeResult.code)
@@ -49,7 +54,7 @@ class Scanner extends Component {
   render() {
     return (
       <Fragment>
-            <div id="barcodeScan"></div>
+            <div id="barcodeScan"></div> 
       </Fragment>
     )
   }

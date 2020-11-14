@@ -1,24 +1,11 @@
-/* .mainNavbar {
-  margin-top: 30px;
-}
-
-.navBrand {
-  color: #626569;
-  font-weight: 700
-} */
 
 .favIcon {
   color: red !important
 }
 
-.navbar-brand:hover {
-  color: #b5b9be;
-  animation: enable 0.1s ease-in-out
-}
-
 .btnNav {
   border: none;
-  color: #626569;
+  color: grey;
   font-weight: 700;
   margin-right: 10
 }

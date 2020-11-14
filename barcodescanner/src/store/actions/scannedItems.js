@@ -1,6 +1,9 @@
+/**
+ * Actions - connect to the database and actions from user. 
+ */
 
 import {URL_PATH, PRINT} from '../../assets/config'
-//import firebase from '../../assets/config'
+
 
 export const startScanning = () => {
   return {

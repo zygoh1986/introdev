@@ -1,3 +1,8 @@
+/**
+ * A product page where user able to view the product details after scanning barcode.
+ * User is able to scan again 
+ */
+
 import React, { Component, Fragment } from 'react'
 import './Product.css'
 
@@ -8,8 +13,8 @@ class Product extends Component {
       <Fragment>
         <div>
         <button 
-          onClick={this.props.click ? this.props.click : this.props.view}
-          className="btn btn-secondary btn-md btn-block btn-scan-again">{this.props.click ? 'Scan Again' : 'View Cart' }</button>
+          onClick={this.props.click ? this.props.click : this.props.view} /**Button to scan again */
+          className="btn btn-secondary btn-md btn-block btn-scan-again">{this.props.click ? 'Scan Again' : 'Back to Cart' }</button>
               <table className="table table-striped">
               <tbody>
                 <tr>

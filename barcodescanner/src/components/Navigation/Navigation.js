@@ -1,3 +1,7 @@
+/**
+ * Navigation component - Created a responsive navigation bar using bootstrap. 
+ */
+
 import React, { Component, Fragment } from 'react'
 import { NavLink } from "react-router-dom";
 import './Navigation.css'
@@ -22,7 +26,7 @@ class Navigation extends Component {
             </NavLink>
           </li>
           <li>
-            <NavLink exact activeClassName="current" to="/History">
+            <NavLink exact activeClassName="current" to="/Cart">
               Cart
             </NavLink>
           </li>

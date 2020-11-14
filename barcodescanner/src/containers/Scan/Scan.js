@@ -1,3 +1,6 @@
+/**
+ * This is a container for Scan. Rendering Start Scan button, invalid barcode, API and no camera message.
+ */
 import React, { Component, Fragment } from 'react'
 import {connect} from 'react-redux'
 import {processBarcode, startScanning} from '../../store/actions/index'
@@ -118,7 +121,7 @@ const mapStateToProps = (state, ownProps) => {
     noApi: state.scanned.noApi
   }
 }
-
+// Receives the dispatch and return callback props
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     process: (barcode) => { dispatch(processBarcode(barcode)) },

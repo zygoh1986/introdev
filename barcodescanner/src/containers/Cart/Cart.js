@@ -1,15 +1,18 @@
+/**
+ * Create a container for the cart. If user did not scan anything, the system will prompt the cart is empty. If there are items, it will then list down the scanned items.
+ */
 import React, { Component, Fragment } from 'react'
 import Product from '../../components/Product/Product'
 import {clearScanned, setItem, deleteItem} from '../../store/actions/index'
 
 import {connect} from 'react-redux'
 
-import './History.css'
+import './Cart.css'
 
-class History extends Component {
+class Cart extends Component {
 
   clickHandler = () => {
-    console.log('asdf')
+    console.log('handler')
   }
 
   componentDidMount(){
@@ -19,14 +22,14 @@ class History extends Component {
 
   render() {
     let scannedItems = 
-          <div className="emptyHistory">
+          <div className="emptyCart">
             <h1>You don't have scanned items on file.</h1>
           </div>
 
 // render the table with all the scanned items info IF there is
 if (this.props.scannedItems.length >= 1){
   scannedItems = 
-  <div className='divHistory'>
+  <div className='divCart'>
           <table className="table table-striped">
             <thead>
               <tr>
@@ -38,10 +41,10 @@ if (this.props.scannedItems.length >= 1){
             </thead>
             <tbody>
               
-              {this.props.scannedItems.map((scannedItem, i) => {
+              {this.props.scannedItems.map((scannedItem, i) => { // add counter to the scanned items. User is able to view more about the products or remove from the cart
                 return (
                   <tr key={i}>
-                    <th scope="row">{i+1}</th>
+                    <th scope="row">{i+1}</th> 
                     <td>{scannedItem.name}</td>
                     <td>{scannedItem.description}</td>
                     <td>{scannedItem.income}</td>
@@ -94,4 +97,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(History)
+export default connect(mapStateToProps, mapDispatchToProps)(Cart)

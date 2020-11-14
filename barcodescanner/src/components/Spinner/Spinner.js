@@ -1,3 +1,6 @@
+/**
+ * Create div to make spinner - to show user it is loading
+*/
 import React from 'react'
 import './Spinner.css'
 

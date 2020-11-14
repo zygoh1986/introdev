@@ -1,11 +1,11 @@
-.divHistory {
+.divCart {
   /* background: red; */
   width: 95%;
   margin: 0 auto;
   margin-top: 25px
 }
 
-.emptyHistory {
+.emptyCart {
   margin-top: 12em;
   text-align: center;
 }
