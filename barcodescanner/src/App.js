@@ -8,7 +8,9 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import Navigation from './components/Navigation/Navigation'
 import Scan from './containers/Scan/Scan'
 import Cart from './containers/Cart/Cart'
+import Objective from './containers/Objective/Objective'
 import './App.css';
+
 
 
 class App extends Component {
@@ -19,7 +21,8 @@ class App extends Component {
     let routes = (
       <Switch>
         <Route exact path='/Cart' component={Cart}/>
-        <Route exact path='/' component={Scan}/>
+        <Route exact path='/Scan' component={Scan}/>
+        <Route exact path='/' component={Objective}/>
       </Switch>
     )
     return (
@@ -30,8 +33,6 @@ class App extends Component {
           <Navigation />
         
           {routes}
-
-
 
         </div>
       </div>

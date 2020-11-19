@@ -26,6 +26,11 @@ class Navigation extends Component {
             </NavLink>
           </li>
           <li>
+            <NavLink exact activeClassName="current" to="/Scan">
+              Scan
+            </NavLink>
+          </li>
+          <li>
             <NavLink exact activeClassName="current" to="/Cart">
               Cart
             </NavLink>
